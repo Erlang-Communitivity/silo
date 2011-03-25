@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<a:feed xmlns:a="http://www.w3.org/2005/Atom" 
+        xmlns:thr="http://purl.org/syndication/thread/1.0" 
+        xmlns="http://www.w3.org/1999/xhtml" 
+        xmlns:foo="http://example.org/unknown-markup" 
+        xml:lang="en-US" 
+        xml:base="http://example.org/foo" 
+        dir="ltr"> 
+  
+  <a:id>tag:example.org,2007:/foo</a:id> 
+  <a:title>Example Feed</a:title> 
+  <a:subtitle type="html"><![CDATA[<p>This is an example feed</p>]]></a:subtitle> 
+  <a:rights type="xhtml">
+    <div>
+      <p>Copyright © James M Snell</p>
+    </div>
+  </a:rights> 
+  <a:author xmlns="http://www.w3.org/2005/Atom"> 
+    <name>James M Snell</name> 
+    <email>jasnell@example.org</email> 
+    <uri>/~jasnell</uri> 
+  </a:author> 
+  <a:updated>2007-10-14T12:12:12Z</a:updated> 
+  <a:link rel="self" href="" /> 
+  <a:link href="/blog" /> 
+  <a:link rel="alternate" type="application/json" href="/blog;json" /> 
+  
+  <a:entry xml:base="entries/1"> 
+    <a:id>tag:example.org,2007:/foo/entries/1</a:id> 
+    <a:title type="text">Entry Number One</a:title> 
+    <a:summary type="xhtml"> 
+      <div> 
+        <p>This is the first entry. You can read it <a href="">here</a></p> 
+      </div> 
+    </a:summary> 
+    <a:rights type="html">
+      <p>Copyright &copy; James M Snell</p>
+    </a:rights> 
+    <a:updated>2007-10-14T12:12:12Z</a:updated> 
+    <a:link href="" /> 
+    <a:link rel="alternate" type="application/json" href="1;json" /> 
+    <a:link rel="replies" type="application/atom+xml" 
+      href="1;replies" thr:count="10" /> 
+    <a:content type="xhtml"> 
+      <div> 
+        <p>This is the content of the first entry. It contains a picture.</p> 
+        <img src="/images/foo.jpg" /> 
+      </div> 
+    </a:content> 
+    <thr:in-reply-to ref="tag:example.org,2007:/foo/entries/2" /> 
+    <a:category scheme="http://example.org/categories/" term="foo" 
+      label="test" xml:lang="en-US" /> 
+    <a:category scheme="http://example.org/categories/" term="bar" 
+      label="essai" xml:lang="fr" /> 
+    <foo:a><foo:b><foo:c d="e">f</foo:c></foo:b></foo:a> 
+  </a:entry> 
+ 
+  <a:entry xml:base="entries/2" xml:lang="fr"> 
+    <a:id>tag:example.org,2007:/foo/entries/2</a:id> 
+    <a:title type="text">La première entrée</a:title> 
+    <a:summary type="xhtml"> 
+      <div> 
+        <p>Il s'agit de la première entrée. Vous pouvez lire 
+        <a href="">est ici</a></p> 
+      </div> 
+    </a:summary>
+    <a:rights type="html">
+      <p>Copyright &copy; James M Snell</p>
+    </a:rights> 
+    <a:updated>2007-10-14T12:12:11Z</a:updated> 
+    <a:link href="" /> 
+    <a:link rel="alternate" type="application/json" href="2;json" /> 
+    <a:link rel="replies" type="application/atom+xml" 
+      href="2;replies" thr:count="10" /> 
+    <a:content type="xhtml"> 
+      <div> 
+        <p>Ceci est le contenu de la première entrée. Il contient une image.</p> 
+        <img src="/images/foo.jpg" /> 
+      </div> 
+    </a:content> 
+    <thr:in-reply-to ref="tag:example.org,2007:/foo/entries/1" /> 
+    <a:category scheme="http://example.org/categories/" term="foo" 
+      label="test" xml:lang="en-US" /> 
+    <a:category scheme="http://example.org/categories/" term="bar" 
+      label="essai" xml:lang="fr" /> 
+    <foo:a><foo:b><foo:c d="e">f</foo:c></foo:b></foo:a> 
+  </a:entry> 
+</a:feed>
